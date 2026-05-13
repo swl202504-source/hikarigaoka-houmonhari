@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>よくある質問｜光が丘訪問はりきゅうそら</title>
+  <meta name="description" content="訪問はりきゅうに関するよくある質問（Q&A）。料金・対象・施術内容・エリアなど、気になる疑問にお答えします。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=M+PLUS+Rounded+1c:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #3a82b8; --primary-light: #5fa0d0; --primary-dark: #2a6494;
+      --accent: #e8954a; --accent-light: #f5d4a8;
+      --bg: #f4f8fc; --bg2: #e4eff8;
+      --text: #1e3a52; --text-light: #5a7a92; --white: #ffffff;
+      --q-bubble: #fef9ec;
+      --q-border: #f0d080;
+      --a-bubble: #eaf4fb;
+      --a-border: #a8cce8;
+    }
+    body { font-family: 'M PLUS Rounded 1c','Hiragino Sans','Yu Gothic',sans-serif; color: var(--text); background: #f0f4fa; line-height: 1.8; }
+
+    /* HEADER */
+    header { background: var(--white); border-bottom: 2px solid var(--bg2); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(58,130,184,0.10); }
+    .header-inner { max-width: 1000px; margin: 0 auto; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.1rem; font-weight: bold; color: var(--primary-dark); line-height: 1.4; text-decoration: none; }
+    .logo span { font-size: 0.7rem; color: var(--text-light); display: block; font-weight: normal; }
+    nav a { text-decoration: none; color: var(--text-light); font-size: 0.82rem; padding: 5px 11px; border-radius: 4px; transition: all 0.2s; }
+    nav a:hover { color: var(--primary); background: var(--bg2); }
+
+    /* PAGE HERO */
+    .page-hero { background: linear-gradient(135deg, #d6eaf8 0%, #eaf4fb 50%, #fdf0e0 100%); padding: 48px 24px 40px; text-align: center; }
+    .page-hero .label { font-size: 0.75rem; letter-spacing: 0.25em; color: var(--primary); margin-bottom: 10px; display: block; }
+    .page-hero h1 { font-size: clamp(1.4rem,3vw,2rem); color: var(--text); margin-bottom: 10px; }
+    .page-hero p { font-size: 0.88rem; color: var(--text-light); }
+
+    /* FAQ MAIN */
+    .faq-main { max-width: 740px; margin: 0 auto; padding: 56px 24px 72px; }
+
+    /* QA PAIR */
+    .qa-pair { margin-bottom: 48px; }
+
+    /* QUESTION ROW */
+    .q-row { display: flex; align-items: flex-end; gap: 14px; margin-bottom: 16px; }
+    .avatar { width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; flex-shrink: 0; border: 3px solid var(--white); box-shadow: 0 2px 8px rgba(0,0,0,0.12); background: var(--white); }
+    .avatar-patient { background: #fff8e8; border-color: var(--q-border); }
+    .avatar-therapist { background: var(--bg2); border-color: var(--a-border); }
+
+    /* Q BUBBLE */
+    .q-bubble {
+      position: relative;
+      background: var(--q-bubble);
+      border: 2px solid var(--q-border);
+      border-radius: 18px 18px 18px 4px;
+      padding: 16px 20px;
+      max-width: 480px;
+      box-shadow: 0 2px 8px rgba(240,208,128,0.3);
+    }
+    .q-bubble::before {
+      content: '';
+      position: absolute;
+      bottom: 10px;
+      left: -12px;
+      border: 6px solid transparent;
+      border-right-color: var(--q-border);
+    }
+    .q-bubble::after {
+      content: '';
+      position: absolute;
+      bottom: 11px;
+      left: -9px;
+      border: 5px solid transparent;
+      border-right-color: var(--q-bubble);
+    }
+    .q-label { font-size: 0.72rem; color: #b8900a; font-weight: bold; letter-spacing: 0.08em; margin-bottom: 6px; }
+    .q-text { font-size: 0.97rem; color: var(--text); font-weight: bold; line-height: 1.6; }
+
+    /* A ROW */
+    .a-row { display: flex; align-items: flex-end; gap: 14px; flex-direction: row-reverse; }
+
+    /* A BUBBLE */
+    .a-bubble {
+      position: relative;
+      background: var(--a-bubble);
+      border: 2px solid var(--a-border);
+      border-radius: 18px 18px 4px 18px;
+      padding: 16px 20px;
+      max-width: 520px;
+      box-shadow: 0 2px 8px rgba(58,130,184,0.12);
+    }
+    .a-bubble::before {
+      content: '';
+      position: absolute;
+      bottom: 10px;
+      right: -12px;
+      border: 6px solid transparent;
+      border-left-color: var(--a-border);
+    }
+    .a-bubble::after {
+      content: '';
+      position: absolute;
+      bottom: 11px;
+      right: -9px;
+      border: 5px solid transparent;
+      border-left-color: var(--a-bubble);
+    }
+    .a-label { font-size: 0.72rem; color: var(--primary-dark); font-weight: bold; letter-spacing: 0.08em; margin-bottom: 6px; text-align: right; }
+    .a-text { font-size: 0.93rem; color: var(--text-light); line-height: 1.85; }
+    .a-text strong { color: var(--text); }
+
+    /* DIVIDER */
+    .qa-divider { border: none; border-top: 1px dashed #c0d8ee; margin: 40px 0; }
+
+    /* CTA */
+    .cta-box { background: var(--primary-dark); border-radius: 8px; padding: 32px; text-align: center; margin-top: 16px; }
+    .cta-box p { color: rgba(255,255,255,0.9); font-size: 0.95rem; margin-bottom: 20px; }
+    .btn { display: inline-block; background: var(--white); color: var(--primary-dark); padding: 12px 30px; border-radius: 4px; text-decoration: none; font-size: 0.92rem; transition: background 0.2s; }
+    .btn:hover { background: var(--accent-light); }
+    .back-link { display: inline-block; font-size: 0.85rem; color: var(--primary); text-decoration: none; margin-top: 28px; }
+
+    footer { background: var(--text); color: rgba(255,255,255,0.5); text-align: center; padding: 32px 24px; font-size: 0.78rem; }
+    footer strong { color: rgba(255,255,255,0.9); display: block; margin-bottom: 8px; font-size: 0.9rem; }
+
+    @media (max-width: 600px) {
+      nav { display: none; }
+      .q-bubble, .a-bubble { max-width: calc(100vw - 120px); }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="sora.html" class="logo">光が丘訪問はりきゅうそら<span>ひかりがおかほうもんはりきゅうそら</span></a>
+    <nav>
+      <a href="sora.html">ホーム</a>
+      <a href="symptoms.html">症状別</a>
+      <a href="blog.html">ブログ</a>
+      <a href="faq.html">Q&A</a>
+      <a href="sora.html#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <span class="label">FAQ</span>
+  <h1>訪問はりきゅうに関する<br>よくある質問（Q&A）</h1>
+  <p>気になる疑問にお答えします</p>
+</div>
+
+<div class="faq-main">
+
+  <!-- Q1 -->
+  <div class="qa-pair">
+    <div class="q-row">
+      <div class="avatar avatar-patient">👴</div>
+      <div class="q-bubble">
+        <div class="q-label">Q1.</div>
+        <div class="q-text">訪問はりきゅうとは<br>どのようなサービスですか？</div>
+      </div>
+    </div>
+    <div class="a-row">
+      <div class="avatar avatar-therapist">👨‍⚕️</div>
+      <div class="a-bubble">
+        <div class="a-label">A.</div>
+        <p class="a-text">訪問はりきゅうとは、<strong>国家資格を持つ鍼灸師</strong>が、ご自宅や施設へ伺って鍼（はり）やお灸（きゅう）の施術を行うサービスです。特に、歩行が困難でご自身での通院が難しい方を対象としています。</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="qa-divider">
+
+  <!-- Q2 -->
+  <div class="qa-pair">
+    <div class="q-row">
+      <div class="avatar avatar-patient">👵</div>
+      <div class="q-bubble">
+        <div class="q-label">Q2.</div>
+        <div class="q-text">どのような人が<br>利用できますか？</div>
+      </div>
+    </div>
+    <div class="a-row">
+      <div class="avatar avatar-therapist">👨‍⚕️</div>
+      <div class="a-bubble">
+        <div class="a-label">A.</div>
+        <p class="a-text">一人では病院や治療院へ通うことが難しい<strong>高齢の方・障がいのある方</strong>が主な対象です。寝たきりの方や車椅子をご利用の方、在宅療養中の方にもご利用いただいています。ご不安な場合はまずお気軽にご相談ください。</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="qa-divider">
+
+  <!-- Q3 -->
+  <div class="qa-pair">
+    <div class="q-row">
+      <div class="avatar avatar-patient">👴</div>
+      <div class="q-bubble">
+        <div class="q-label">Q3.</div>
+        <div class="q-text">どのエリアに<br>来てもらえますか？</div>
+      </div>
+    </div>
+    <div class="a-row">
+      <div class="avatar avatar-therapist">👨‍⚕️</div>
+      <div class="a-bubble">
+        <div class="a-label">A.</div>
+        <p class="a-text">現在の往診エリアは<strong>東京都練馬区・板橋区、埼玉県和光市</strong>です。エリア外の場合もまずはご相談ください。対応できるケースもあります。</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="qa-divider">
+
+  <!-- Q4 -->
+  <div class="qa-pair">
+    <div class="q-row">
+      <div class="avatar avatar-patient">👩</div>
+      <div class="q-bubble">
+        <div class="q-label">Q4.</div>
+        <div class="q-text">鍼は痛くないですか？<br>お灸は熱くないですか？</div>
+      </div>
+    </div>
+    <div class="a-row">
+      <div class="avatar avatar-therapist">👨‍⚕️</div>
+      <div class="a-bubble">
+        <div class="a-label">A.</div>
+        <p class="a-text">鍼は注射針と異なり<strong>非常に細い</strong>ため、ほとんどの方が痛みをほとんど感じません。お灸は「じんわり温かい」と感じる程度で、熱さや痛みがないよう調整しながら施術します。はじめての方も安心してお受けいただけます。</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="qa-divider">
+
+  <!-- Q5 -->
+  <div class="qa-pair">
+    <div class="q-row">
+      <div class="avatar avatar-patient">👴</div>
+      <div class="q-bubble">
+        <div class="q-label">Q5.</div>
+        <div class="q-text">どんな症状に<br>対応していますか？</div>
+      </div>
+    </div>
+    <div class="a-row">
+      <div class="avatar avatar-therapist">👨‍⚕️</div>
+      <div class="a-bubble">
+        <div class="a-label">A.</div>
+        <p class="a-text"><strong>腰痛・ひざ痛・しびれ・むくみ</strong>などの症状に対応しています。また、末期がんの方の緩和ケア（痛みやしびれの緩和、むくみの軽減）にも対応しており、医療・介護チームと連携しながら施術を行っています。</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="qa-divider">
+
+  <!-- Q6 -->
+  <div class="qa-pair">
+    <div class="q-row">
+      <div class="avatar avatar-patient">👵</div>
+      <div class="q-bubble">
+        <div class="q-label">Q6.</div>
+        <div class="q-text">家族も一緒に<br>施術を受けられますか？</div>
+      </div>
+    </div>
+    <div class="a-row">
+      <div class="avatar avatar-therapist">👨‍⚕️</div>
+      <div class="a-bubble">
+        <div class="a-label">A.</div>
+        <p class="a-text">はい、ご家族も施術をご希望の場合はご相談ください。介護をされているご家族様の腰痛や疲れにも対応しています。また、ご自宅でのセルフケアとして<strong>せんねん灸</strong>の使い方をご指導することもできます。</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="qa-divider">
+
+  <!-- Q7 -->
+  <div class="qa-pair">
+    <div class="q-row">
+      <div class="avatar avatar-patient">👴</div>
+      <div class="q-bubble">
+        <div class="q-label">Q7.</div>
+        <div class="q-text">まず相談だけでも<br>できますか？</div>
+      </div>
+    </div>
+    <div class="a-row">
+      <div class="avatar avatar-therapist">👨‍⚕️</div>
+      <div class="a-bubble">
+        <div class="a-label">A.</div>
+        <p class="a-text">もちろんです！「訪問できるエリアか」「どんな症状に対応できるか」「料金はどれくらいか」など、どんな質問でも歓迎します。まずは<strong>メールでお気軽にご連絡</strong>ください。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-box">
+    <p>他にもご不明な点はお気軽にどうぞ。<br>メールにてご相談をお待ちしています。</p>
+    <a href="mailto:egawabass@yahoo.co.jp" class="btn">メールでお問い合わせ</a>
+  </div>
+
+  <a href="sora.html" class="back-link">← トップページへ戻る</a>
+</div>
+
+<footer>
+  <strong>光が丘訪問はりきゅうそら</strong>
+  東京都練馬区 ／ 往診エリア：練馬区・板橋区・和光市<br>
+  営業時間 8:00〜19:00（日曜定休）<br><br>
+  © 光が丘訪問はりきゅうそら All rights reserved.
+</footer>
+
+</body>
+</html>

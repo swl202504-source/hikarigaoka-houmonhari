@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ブログ｜光が丘訪問はりきゅうそら</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=M+PLUS+Rounded+1c:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #3a82b8; --primary-light: #5fa0d0; --primary-dark: #2a6494;
+      --accent: #e8954a; --accent-light: #f5d4a8;
+      --bg: #f4f8fc; --bg2: #e4eff8;
+      --text: #1e3a52; --text-light: #5a7a92; --white: #ffffff;
+    }
+    body { font-family: 'M PLUS Rounded 1c','Hiragino Sans','Yu Gothic',sans-serif; color: var(--text); background: var(--bg); line-height: 1.8; }
+    header { background: var(--white); border-bottom: 2px solid var(--bg2); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(58,130,184,0.10); }
+    .header-inner { max-width: 1000px; margin: 0 auto; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.1rem; font-weight: bold; color: var(--primary-dark); line-height: 1.4; text-decoration: none; }
+    .logo span { font-size: 0.7rem; color: var(--text-light); display: block; font-weight: normal; }
+    nav a { text-decoration: none; color: var(--text-light); font-size: 0.82rem; padding: 5px 11px; border-radius: 4px; transition: all 0.2s; }
+    nav a:hover { color: var(--primary); background: var(--bg2); }
+    .page-hero { background: linear-gradient(135deg, #d6eaf8 0%, #eaf4fb 50%, #fdf0e0 100%); padding: 48px 24px; text-align: center; }
+    .page-hero .label { font-size: 0.75rem; letter-spacing: 0.25em; color: var(--primary); margin-bottom: 10px; display: block; }
+    .page-hero h1 { font-size: clamp(1.5rem,3vw,2.2rem); color: var(--text); margin-bottom: 10px; }
+    .page-hero p { font-size: 0.88rem; color: var(--text-light); }
+    .blog-main { max-width: 760px; margin: 0 auto; padding: 56px 24px; }
+    .blog-grid { display: grid; gap: 24px; }
+    .blog-card { background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(58,130,184,0.08); transition: transform 0.2s, box-shadow 0.2s; border-top: 3px solid var(--primary-light); }
+    .blog-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(58,130,184,0.15); }
+    .blog-card-body { padding: 26px 28px 22px; }
+    .blog-meta { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+    .blog-date { font-size: 0.78rem; color: var(--text-light); }
+    .blog-tag { font-size: 0.72rem; background: var(--bg2); color: var(--primary); padding: 3px 10px; border-radius: 100px; }
+    .blog-card h2 { font-size: 1.05rem; color: var(--text); margin-bottom: 10px; line-height: 1.5; }
+    .blog-card h2 a { text-decoration: none; color: inherit; }
+    .blog-card h2 a:hover { color: var(--primary); }
+    .blog-excerpt { font-size: 0.87rem; color: var(--text-light); line-height: 1.85; margin-bottom: 16px; }
+    .read-more { font-size: 0.82rem; color: var(--primary); text-decoration: none; border-bottom: 1px solid var(--primary); padding-bottom: 1px; }
+    .read-more:hover { color: var(--primary-dark); }
+    footer { background: var(--text); color: rgba(255,255,255,0.5); text-align: center; padding: 32px 24px; font-size: 0.78rem; }
+    footer strong { color: rgba(255,255,255,0.9); display: block; margin-bottom: 8px; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <a href="sora.html" class="logo">光が丘訪問はりきゅうそら<span>ひかりがおかほうもんはりきゅうそら</span></a>
+    <nav>
+      <a href="sora.html">ホーム</a>
+      <a href="symptoms.html">症状別</a>
+      <a href="blog.html">ブログ</a>
+      <a href="sora.html#testimonials">患者様の声</a>
+      <a href="sora.html#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+<div class="page-hero">
+  <span class="label">Blog</span>
+  <h1>ブログ</h1>
+  <p>お灸・鍼灸・在宅ケアについての情報をお届けします</p>
+</div>
+<div class="blog-main">
+  <div class="blog-grid">
+
+    <div class="blog-card">
+      <div class="blog-card-body">
+        <div class="blog-meta">
+          <span class="blog-date">2025.10.31</span>
+          <span class="blog-tag">お灸</span>
+        </div>
+        <h2><a href="posts/post-1.html">火を使わないお灸「太陽」が人気です</a></h2>
+        <p class="blog-excerpt">最近、患者様からよくご質問いただくのが「火を使わないお灸ってあるの？」というお声です。せんねん灸の「太陽」シリーズはシールを貼るだけで温熱効果が得られます…</p>
+        <a href="posts/post-1.html" class="read-more">続きを読む →</a>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-card-body">
+        <div class="blog-meta">
+          <span class="blog-date">2025.01.26</span>
+          <span class="blog-tag">お灸・エッセイ</span>
+        </div>
+        <h2><a href="posts/post-2.html">お灸と懐かしい思い出</a></h2>
+        <p class="blog-excerpt">施術中に患者様がふと「子供のころ、おばあちゃんにお灸をすえてもらったなあ」とつぶやかれることがあります。お灸は日本に古くから伝わる温熱療法…</p>
+        <a href="posts/post-2.html" class="read-more">続きを読む →</a>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-card-body">
+        <div class="blog-meta">
+          <span class="blog-date">2024.10.25</span>
+          <span class="blog-tag">緩和ケア</span>
+        </div>
+        <h2><a href="posts/post-3.html">末期がんと鍼灸</a></h2>
+        <p class="blog-excerpt">患者様には、医師から末期がんを告げられ、最後まで住み慣れた自宅で過ごすことを選択される方もいらっしゃいます。在宅での鍼灸利用が少しずつ広がっています…</p>
+        <a href="posts/post-3.html" class="read-more">続きを読む →</a>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-card-body">
+        <div class="blog-meta">
+          <span class="blog-date">2024.09.28</span>
+          <span class="blog-tag">お灸・家族</span>
+        </div>
+        <h2><a href="posts/post-4.html">家族団欒の時間にもなるせんねん灸</a></h2>
+        <p class="blog-excerpt">訪問施術をしていると、ご家族が「私もやってもらえますか？」とおっしゃることがあります。介護の疲れを感じているご家族の体と心もほぐしてくれるお灸の温かさ…</p>
+        <a href="posts/post-4.html" class="read-more">続きを読む →</a>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-card-body">
+        <div class="blog-meta">
+          <span class="blog-date">2024.06.28</span>
+          <span class="blog-tag">鍼灸・健康</span>
+        </div>
+        <h2><a href="posts/post-5.html">灸で心とからだがすっきりする</a></h2>
+        <p class="blog-excerpt">お灸の効果として「体が温まる」「痛みが和らぐ」はよく知られていますが、患者様からよく聞くのは「なんとなくすっきりする」「気持ちが楽になる」という感想です…</p>
+        <a href="posts/post-5.html" class="read-more">続きを読む →</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+<footer>
+  <strong>光が丘訪問はりきゅうそら</strong>
+  東京都練馬区 ／ 往診エリア：練馬区・板橋区・和光市<br>
+  営業時間 8:00〜19:00（日曜定休）<br><br>
+  © 光が丘訪問はりきゅうそら All rights reserved.
+</footer>
+</body>
+</html>
